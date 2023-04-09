@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-bodytext',
@@ -6,5 +6,13 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./bodytext.component.scss'],
 })
 export class BodytextComponent {
-  @Input() fromMainbody!: string;
+  childMessage: string = 'message from child component';
+  outputChildMessage: any = [];
+  @Input() fromMainbody: any;
+  @Output()
+  messageEvent: EventEmitter<any> = new EventEmitter();
+  sendMessage() {
+    this.outputChildMessage.push('message from child component via output');
+    this.messageEvent.emit(this.outputChildMessage);
+  }
 }

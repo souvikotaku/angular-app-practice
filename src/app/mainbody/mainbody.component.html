@@ -1,3 +1,5 @@
 <h1>{{title}}</h1>
 <h2>{{fromParent}}</h2>
-<app-bodytext [fromMainbody]='mainbodymessage'></app-bodytext>
+<h2>{{msgfromchild}}</h2>
+<h2 *ngFor="let item of receivedmsgfrombtn;let index=index;">{{index+1}}{{' '}}{{item}}</h2>
+<app-bodytext [fromMainbody]='mainbodymessage' (messageEvent)='receiveMessage($event)'></app-bodytext>
