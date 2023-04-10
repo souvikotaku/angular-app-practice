@@ -15,6 +15,10 @@ import { BodytextComponent } from './components/bodytext/bodytext.component';
 export class MainBody implements AfterViewInit {
   title: string = 'Angular App';
   mainbodymessage: string = 'message coming from main body';
+
+  // this is like states in react
+  userName: any = 'write something';
+
   msgfromchild: any;
   receivedmsgfrombtn: any;
   @Input()
@@ -42,8 +46,20 @@ export class MainBody implements AfterViewInit {
     console.log('clicked new btn');
   }
 
-  onKeyup() {
-    console.log('on key up');
+  onKeyup($event: any) {
+    if ($event.keyCode == 13) {
+      console.log($event.target.value);
+    }
+  }
+  onKeyup2($event: any) {
+    console.log($event.target.value);
+  }
+
+  onKeyup3(username: any) {
+    console.log(username);
+  }
+  onKeyup4() {
+    console.log(this.userName);
   }
   // ngOnInit(): void {}
 }

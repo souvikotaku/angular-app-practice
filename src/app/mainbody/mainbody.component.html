@@ -46,7 +46,24 @@ text-align: center;
 
 <button (click)='sendMessage2()'>Click</button>
 
-<!-- event filtering -->
+<!-- event filtering only when enter is pressed -->
 <div>
-    <input type="text" (keyup)="onKeyup()">
-</div>
+    <input type="text" (keyup)="onKeyup($event)">
+</div><br/>
+
+<!-- event filtering only when enter is pressed in angular way-->
+
+<div>
+    <input type="text" (keyup.enter)="onKeyup2($event)">
+</div><br/>
+
+<!-- event filtering only when enter is pressed template variable way-->
+
+<div>
+    <input type="text" (keyup.enter)="onKeyup3(username.value)" #username>
+</div><br/>
+
+<!-- two way data binding -->
+<div>
+    <input type="text" [(ngModel)]="userName" (keyup.enter)="onKeyup4()" >
+</div><br/>
