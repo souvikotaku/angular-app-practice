@@ -1,13 +1,25 @@
+
+<!-- title variable -->
 <h1>{{title}}</h1>
+
+<!-- data passed from parent to child -->
 <h2>{{fromParent}}</h2>
+
+<!-- data passed from child to parent -->
 <h2>{{msgfromchild}}</h2>
+
+<!-- mapping array -->
 <h2 *ngFor="let item of receivedmsgfrombtn;let index=index;">{{index+1}}{{' '}}{{item}}</h2>
+
+<!-- displaying data passed from child to parent via onclick on a button in child -->
 <app-bodytext [fromMainbody]='mainbodymessage' (messageEvent)='receiveMessage($event)'></app-bodytext>
+
+<!-- displaying image -->
 <div>
     <img width="300" [src]="imgUrl" />
 </div>
 
-<!-- boolean test -->
+<!-- boolean condition test -->
 
 <!-- angular way -->
 <h2 
@@ -18,5 +30,15 @@
 <!-- ternary/string interpolation way -->
 <h2 
 
-class="{{redBool2 ? 'text-red' : 'text-blue' }}"
+[class]="redBool2 ? 'text-red' : 'text-blue'"
+>new boolean test ternary string interpolation way</h2>
+
+<!-- inline styling -->
+
+<h2 
+[style]="'
+color: green;
+text-align: center;
+
+'"
 >new boolean test ternary string interpolation way</h2>
