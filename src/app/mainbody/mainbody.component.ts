@@ -37,5 +37,13 @@ export class MainBody implements AfterViewInit {
   redBool: boolean = true;
   redBool2: boolean = false;
   redBool3: boolean = true;
+
+  sendMessage2() {
+    console.log('clicked new btn');
+  }
+
+  onKeyup() {
+    console.log('on key up');
+  }
   // ngOnInit(): void {}
 }

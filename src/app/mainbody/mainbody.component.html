@@ -41,3 +41,12 @@ text-align: center;
 '"
 [style.color]="redBool3 ? 'green' : 'purple'"
 >new boolean test ternary string interpolation way</h2>
+
+<!-- event binding -->
+
+<button (click)='sendMessage2()'>Click</button>
+
+<!-- event filtering -->
+<div>
+    <input type="text" (keyup)="onKeyup()">
+</div>
