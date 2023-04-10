@@ -3,3 +3,20 @@
 <h2>{{msgfromchild}}</h2>
 <h2 *ngFor="let item of receivedmsgfrombtn;let index=index;">{{index+1}}{{' '}}{{item}}</h2>
 <app-bodytext [fromMainbody]='mainbodymessage' (messageEvent)='receiveMessage($event)'></app-bodytext>
+<div>
+    <img width="300" [src]="imgUrl" />
+</div>
+
+<!-- boolean test -->
+
+<!-- angular way -->
+<h2 
+[class.text-red]="redBool" 
+[class.text-blue]="!redBool" 
+>new boolean test angular way</h2>
+
+<!-- ternary/string interpolation way -->
+<h2 
+
+class="{{redBool2 ? 'text-red' : 'text-blue' }}"
+>new boolean test ternary string interpolation way</h2>
