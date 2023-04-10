@@ -19,7 +19,7 @@
     <img width="300" [src]="imgUrl" />
 </div>
 
-<!-- boolean condition test -->
+<!-- class condition with boolean -->
 
 <!-- angular way -->
 <h2 
@@ -33,12 +33,11 @@
 [class]="redBool2 ? 'text-red' : 'text-blue'"
 >new boolean test ternary string interpolation way</h2>
 
-<!-- inline styling -->
-
+<!-- inline styling with and without condition -->
 <h2 
 [style]="'
-color: green;
 text-align: center;
 
 '"
+[style.color]="redBool3 ? 'green' : 'purple'"
 >new boolean test ternary string interpolation way</h2>

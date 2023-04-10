@@ -36,5 +36,6 @@ export class MainBody implements AfterViewInit {
 
   redBool: boolean = true;
   redBool2: boolean = false;
+  redBool3: boolean = true;
   // ngOnInit(): void {}
 }
