@@ -18,6 +18,10 @@ export class MainBody implements AfterViewInit {
 
   // this is like states in react
   userName: any = 'write something';
+  postTitle: any;
+  postDetails: any;
+  postImagelink: any;
+  postLink: any;
 
   msgfromchild: any;
   receivedmsgfrombtn: any;
@@ -60,6 +64,18 @@ export class MainBody implements AfterViewInit {
   }
   onKeyup4() {
     console.log(this.userName);
+  }
+  onKeyup5() {
+    console.log(this.postTitle);
+  }
+  onKeyup6() {
+    console.log(this.postDetails);
+  }
+  onKeyup7() {
+    console.log(this.postImagelink);
+  }
+  onKeyup8() {
+    console.log(this.postLink);
   }
   // ngOnInit(): void {}
 }

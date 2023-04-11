@@ -65,5 +65,39 @@ text-align: center;
 
 <!-- two way data binding -->
 <div>
-    <input type="text" [(ngModel)]="userName" (keyup.enter)="onKeyup4()" >
+    <input type="text" [(ngModel)]="userName"  >
 </div><br/>
+
+
+<!-- Task -->
+<div [style]="'
+display: flex;
+    justify-content: center;
+'">
+    <div [style]="
+    'text-align:center'
+    "
+    class="row"
+    >
+        <h1 class="col-12">Task</h1><br/>
+        <input type="text" placeholder="post title" [(ngModel)]="postTitle" (keyup)="onKeyup5()" class="col-12" [style]="'
+        margin-bottom: 10px
+        '">
+        <input type="text" placeholder="post details" [(ngModel)]="postDetails" (keyup)="onKeyup6()" class="col-12" [style]="'
+        margin-bottom: 10px
+        '">
+        <input type="text" placeholder="post image" [(ngModel)]="postImagelink" (keyup)="onKeyup7()" class="col-12" [style]="'
+        margin-bottom: 10px
+        '">
+        <input type="text" placeholder="post link" [(ngModel)]="postLink" (keyup)="onKeyup8()" class="col-12" [style]="'
+        margin-bottom: 10px
+        '">
+    </div>
+</div>
+
+
+
+<p>{{postTitle}}</p>
+<p>{{postDetails}}</p>
+<img  width="300" [src]="postImagelink"/>
+<a [href]="'http://'+postLink" target="_blank" >{{postLink}}</a>
